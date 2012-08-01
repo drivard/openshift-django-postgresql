@@ -29,7 +29,7 @@ Create a python-2.6 application
 
 Add PostgreSQL Database service
 
-    rhc-ctl-app -a django -e add-postgresql-8.4
+    rhc app cartridge add -a django -c postgresql-8.4
 
 Add this upstream seambooking repo
 
@@ -45,7 +45,7 @@ Create the Django admin user
 
 Find your openshift app UUID
 
-    rhc domain
+    rhc domain show  --timeout 1000
 
 Connect through ssh to your app
 
@@ -61,7 +61,7 @@ Export the python egg cache directory
 
 Create the admin user
 
-    ../../../../virtenv/bin/python ./manage.py createsuperuser
+    virtenv/bin/python repo/wsgi/openshift/manage.py syncdb
 
 That's it, you can now checkout your application at (Using the user you just created.):
 
