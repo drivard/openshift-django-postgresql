@@ -22,6 +22,10 @@ PROJECT_DIR = os.path.dirname(os.path.realpath(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+ALLOWED_HOSTS = []
+if os.environ.has_key('OPENSHIFT_GEAR_DNS'):
+    ALLOWED_HOSTS.append(os.environ['OPENSHIFT_GEAR_DNS'])
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
