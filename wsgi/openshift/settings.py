@@ -8,14 +8,14 @@ if os.environ.has_key('OPENSHIFT_REPO_DIR'):
     ON_OPENSHIFT = True
 if os.environ.has_key('OPENSHIFT_APP_NAME'):
     DB_NAME = os.environ['OPENSHIFT_APP_NAME']
-if os.environ.has_key('OPENSHIFT_DB_USERNAME'):
-    DB_USER = os.environ['OPENSHIFT_DB_USERNAME']
-if os.environ.has_key('OPENSHIFT_DB_PASSWORD'):
-    DB_PASSWD = os.environ['OPENSHIFT_DB_PASSWORD']
-if os.environ.has_key('OPENSHIFT_DB_HOST'):
-    DB_HOST = os.environ['OPENSHIFT_DB_HOST']
-if os.environ.has_key('OPENSHIFT_DB_PORT'):
-    DB_PORT = os.environ['OPENSHIFT_DB_PORT']
+if os.environ.has_key('OPENSHIFT_POSTGRESQL_DB_USERNAME'):
+    DB_USER = os.environ['OPENSHIFT_POSTGRESQL_DB_USERNAME']
+if os.environ.has_key('OPENSHIFT_POSTGRESQL_DB_PASSWORD'):
+    DB_PASSWD = os.environ['OPENSHIFT_POSTGRESQL_DB_PASSWORD']
+if os.environ.has_key('OPENSHIFT_POSTGRESQL_DB_HOST'):
+    DB_HOST = os.environ['OPENSHIFT_POSTGRESQL_DB_HOST']
+if os.environ.has_key('OPENSHIFT_POSTGRESQL_DB_PORT'):
+    DB_PORT = os.environ['OPENSHIFT_POSTGRESQL_DB_PORT']
 
 PROJECT_DIR = os.path.dirname(os.path.realpath(__file__))
 
